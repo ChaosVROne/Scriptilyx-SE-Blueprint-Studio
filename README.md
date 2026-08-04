@@ -2,6 +2,7 @@
 Scriptilyx - SE Blueprint Studio is a professional external blueprint creator and editor for Space Engineers. It allows players to design ships, stations, vehicles, and other grid-based creations using official Space Engineers block definitions.
 
 # Download
+https://github.com/ChaosVROne/Scriptilyx-SE-Blueprint-Studio/releases/download/v1.2.2/Scriptilyx.SE.Blueprint.Studio.zip
 > 🟠 Go to the Releases section and download the latest .zip file.
 
 # Repository Info
