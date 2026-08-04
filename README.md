@@ -3,7 +3,7 @@ Scriptilyx - SE Blueprint Studio is a professional external blueprint creator an
 
 # Download Here
 > 🟠 https://github.com/ChaosVROne/Scriptilyx-SE-Blueprint-Studio/releases/download/v1.2.2/Scriptilyx.SE.Blueprint.Studio.zip
-
+<img width="1276" height="716" alt="image" src="https://github.com/user-attachments/assets/5914124b-f24b-40d0-9982-dcee96f0a13d" />
 
 # Repository Info
 This repository is used for public downloads, documentation, and release files.
@@ -31,7 +31,7 @@ Import existing Space Engineers blueprints
 Export completed blueprints for use in Space Engineers
 Includes a detailed user guide
 
-<img width="1276" height="716" alt="image" src="https://github.com/user-attachments/assets/5914124b-f24b-40d0-9982-dcee96f0a13d" />
+<img width="1916" height="1009" alt="image" src="https://github.com/user-attachments/assets/93725adc-3f96-44b8-8126-7d03ca4d161f" />
 
 ## Included Files
 
@@ -47,10 +47,7 @@ Includes a detailed user guide
 - OpenTK and OpenGL rendering files
 - Image, texture, and compression libraries
 - Self-contained .NET runtime files required by the app
-
-<img width="1916" height="1009" alt="image" src="https://github.com/user-attachments/assets/93725adc-3f96-44b8-8126-7d03ca4d161f" />
-
-
+- 
 # Source Code
 The source code is not included in this repository.
 
