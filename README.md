@@ -1,6 +1,12 @@
 # Scriptilyx SE Blueprint Studio
 Scriptilyx - SE Blueprint Studio is a professional external blueprint creator and editor for Space Engineers. It allows players to design ships, stations, vehicles, and other grid-based creations using official Space Engineers block definitions.
 
+# Download
+> 🟠 Go to the Releases section and download the latest .zip file.
+
+# Repository Info
+This repository is used for public downloads, documentation, and release files.
+
 The program includes a 3D building workspace with block placement, rotation, selection, duplication, deletion, grid visibility controls, and X, Y, and Z mirror placement. Mirrored blocks automatically copy both their position and orientation, making symmetrical builds faster and easier.
 
 Blocks can be searched and filtered by category, grid size, and DLC. Frequently used blocks can be placed on the bottom toolbar for quick access. The editor also supports multiple blueprint tabs, large and small grids, static and mobile grids, mechanical blocks, block previews, undo and redo, project saving, blueprint importing, and exporting creations for use in Space Engineers.
@@ -24,12 +30,7 @@ Import existing Space Engineers blueprints
 Export completed blueprints for use in Space Engineers
 Includes a detailed user guide
 
-# This repository is used for public downloads, documentation, and release files.
-
 <img width="1276" height="716" alt="image" src="https://github.com/user-attachments/assets/5914124b-f24b-40d0-9982-dcee96f0a13d" />
-
-# Download
-Go to the Releases section and download the latest .zip file.
 
 ## Included Files
 
