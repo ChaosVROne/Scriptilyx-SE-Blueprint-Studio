@@ -5,8 +5,9 @@ Scriptilyx - SE Blueprint Studio is a professional external blueprint creator an
 This repository is used for public downloads, documentation, and release files.
 
 # Download Here
-> 🟠 https://github.com/ChaosVROne/Scriptilyx-SE-Blueprint-Studio/releases/download/v1.2.2/Scriptilyx.SE.Blueprint.Studio.zip
-<img width="1276" height="716" alt="image" src="https://github.com/user-attachments/assets/5914124b-f24b-40d0-9982-dcee96f0a13d" />
+> 🟠 https://github.com/ChaosVROne/Scriptilyx-SE-Blueprint-Studio/releases/download/v1.2.2/Scriptilyx.-.SE.Blueprint.Studio.zip
+<img width="1235" height="662" alt="image" src="https://github.com/user-attachments/assets/c8deac4c-2b98-4cf5-91c2-2e731af9b333" />
+
 
 The program includes a 3D building workspace with block placement, rotation, selection, duplication, deletion, grid visibility controls, and X, Y, and Z mirror placement. Mirrored blocks automatically copy both their position and orientation, making symmetrical builds faster and easier.
 
@@ -31,7 +32,8 @@ Import existing Space Engineers blueprints
 Export completed blueprints for use in Space Engineers
 Includes a detailed user guide
 
-<img width="1916" height="1009" alt="image" src="https://github.com/user-attachments/assets/93725adc-3f96-44b8-8126-7d03ca4d161f" />
+<img width="1919" height="1079" alt="SEVCS1" src="https://github.com/user-attachments/assets/f53322f5-bfd3-4886-8efb-4c8b5036fc50" />
+
 
 ## Included Files
 
