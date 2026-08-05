@@ -16,21 +16,21 @@ Blocks can be searched and filtered by category, grid size, and DLC. Frequently 
 Scriptilyx - SE Blueprint Studio is designed to provide a CAD-style building experience while remaining familiar and easy to use for Space Engineers players. It is especially useful for planning complex builds, creating symmetrical designs, and working on blueprints without having to launch the game.
 
 # Main Features
-Create and edit Space Engineers blueprints outside the game
-Build ships, stations, vehicles, and structures in a 3D workspace
-Use official vanilla and installed DLC block definitions
-Search and filter blocks by category, grid size, and DLC
-Place, rotate, select, duplicate, and delete blocks
-Mirror block placement and rotation across the X, Y, and Z axes
-Work with large grids, small grids, static grids, and mobile grids
-Support for rotors, hinges, pistons, and mechanical top parts
-Use multiple blueprint tabs
-Add frequently used blocks to the quick-access toolbar
-Undo and redo editing actions
-Save projects and continue working later
-Import existing Space Engineers blueprints
-Export completed blueprints for use in Space Engineers
-Includes a detailed user guide
+- Create and edit Space Engineers blueprints outside the game.
+- Build ships, stations, vehicles, and structures in a 3D workspace.
+- Use official vanilla and installed DLC block definitions.
+- Search and filter blocks by category, grid size, and DLC.
+- Place, rotate, select, duplicate, and delete blocks.
+- Mirror block placement and rotation across the X, Y, and Z axes.
+- Work with large grids, small grids, static grids, and mobile grids.
+- Supports rotors, hinges, pistons, and mechanical top parts.
+- Use multiple blueprint tabs.
+- Add frequently used blocks to the quick-access toolbar.
+- Undo and redo editing actions.
+- Save projects and continue working later.
+- Import existing Space Engineers blueprints.
+- Export completed blueprints for use in Space Engineers.
+- Includes a detailed user guide.
 
 <img width="1919" height="1079" alt="SEVCS1" src="https://github.com/user-attachments/assets/f53322f5-bfd3-4886-8efb-4c8b5036fc50" />
 
