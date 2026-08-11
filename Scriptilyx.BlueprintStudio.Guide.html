@@ -147,7 +147,7 @@ td { background: #0b1e2b; color: #d3e6ee; }
       <a href="#viewport">3D viewport controls</a>
       <a href="#placing">Placing and editing blocks</a>
       <a href="#grids">Grids and subgrids</a>
-      <a href="#mechanical">Pistons, rotors, and hinges</a>
+      <a href="#mechanical">Pistons, rotors, hinges, suspensions, and wheels</a>
       <a href="#properties">Explorer and Properties</a>
       <a href="#validation">Validation</a>
       <a href="#export">Exporting to Space Engineers</a>
@@ -170,7 +170,7 @@ td { background: #0b1e2b; color: #d3e6ee; }
         </div>
         <p class="hero-copy">A complete user guide for creating, editing, validating, importing, and exporting Space Engineers blueprints. This guide focuses entirely on using the application and building successfully.</p>
         <div class="badges">
-          <span class="badge"><strong>Version</strong> 1.2.5.2</span>
+          <span class="badge"><strong>Version</strong> 1.2.3</span>
           <span class="badge"><strong>Platform</strong> Windows desktop</span>
           <span class="badge"><strong>Game</strong> Space Engineers</span>
           <span class="badge"><strong>Guide</strong> Offline and self-contained</span>
@@ -197,7 +197,7 @@ td { background: #0b1e2b; color: #d3e6ee; }
           <div class="card"><h3>Block Palette</h3><p>Searches and filters the available Space Engineers blocks. It is also the source for assigning blocks to the bottom toolbar.</p></div>
           <div class="card"><h3>Blueprint tabs</h3><p>Each open blueprint has its own compact tab. Click a tab to switch projects and use its PNG close button to close it.</p></div>
           <div class="card"><h3>3D viewport</h3><p>The main construction area. Orbit, pan, zoom, select, rotate, mirror, place, duplicate, delete, and inspect blocks here. The Show Grid control at the upper left turns the construction grid on or off.</p></div>
-          <div class="card"><h3>Right-side panel</h3><p>Contains Explorer, Properties, and Statistics. The panel can be resized while its vertical picture-button strip remains docked. Mirror X, Mirror Y, and Mirror Z controls are located below Delete.</p></div>
+          <div class="card"><h3>Right-side panel</h3><p>Contains Explorer, Properties, Lighting, and Statistics. The panel can be resized while its vertical picture-button strip remains docked. Mirror X, Mirror Y, and Mirror Z controls are located below Delete.</p></div>
           <div class="card"><h3>Output and Error List</h3><p>Output reports activity and warnings. Error List reports validation issues and can locate the affected grid or block.</p></div>
         </div>
       </section>
@@ -254,17 +254,22 @@ td { background: #0b1e2b; color: #d3e6ee; }
         <table>
           <thead><tr><th>Input</th><th>Viewport action</th></tr></thead>
           <tbody>
-            <tr><td>Right mouse drag</td><td>Orbit the camera around the blueprint.</td></tr>
-            <tr><td>Middle mouse drag</td><td>Pan the camera.</td></tr>
-            <tr><td>Mouse wheel</td><td>Zoom in or out.</td></tr>
-            <tr><td>Alt + left mouse drag</td><td>Alternate orbit control.</td></tr>
+            <tr><td>Right mouse drag</td><td>Free-orbit in orbit mode; free-look in spectator mode.</td></tr>
+            <tr><td>Middle mouse drag</td><td>Pan the orbit target or spectator camera in its current view plane.</td></tr>
+            <tr><td>Mouse wheel</td><td>Zoom orbit mode; dolly the actual camera forward/backward in spectator mode.</td></tr>
+            <tr><td>Alt + left mouse drag</td><td>Alternate unrestricted orbit/free-look control.</td></tr>
             <tr><td>Shift + right mouse drag</td><td>Alternate pan control.</td></tr>
+            <tr><td><kbd>C</kbd></td><td>Toggle orbit and spectator camera modes.</td></tr>
+            <tr><td><kbd>W</kbd>/<kbd>A</kbd>/<kbd>S</kbd>/<kbd>D</kbd></td><td>Fly while spectator mode is active.</td></tr>
+            <tr><td><kbd>Q</kbd>/<kbd>E</kbd></td><td>Move down/up on world Y while spectator mode is active.</td></tr>
+            <tr><td><kbd>Shift</kbd></td><td>5x spectator movement boost while held.</td></tr>
+            <tr><td><kbd>Ctrl</kbd></td><td>Precision spectator movement while held.</td></tr>
             <tr><td><kbd>X</kbd>, <kbd>Y</kbd>, <kbd>Z</kbd></td><td>Rotate the active placement block around that axis.</td></tr>
             <tr><td><kbd>R</kbd></td><td>Reset the placement rotation.</td></tr>
           </tbody>
         </table>
         <h3>Grid display</h3>
-        <p>Use <strong>Show Grid</strong> to turn the construction grid on or off. The white occupied-cell outlines show the cells a block uses; the visible model may not fill every part of its occupied cells.</p>
+        <p>Use <strong>Show Grid</strong> to turn the construction grid on or off. The construction grid stays on the chosen build grid while you click and inspect blocks. It changes when you choose another grid in Explorer or begin placing on another compatible subgrid, and it continues to follow that grid when a rotor, hinge, or piston moves it. The white occupied-cell outlines show the cells a block uses; the visible model may not fill every part of its occupied cells.</p>
         <h3>Selection</h3>
         <p>Switch to Select mode to inspect an existing block. Mechanical top parts use model-aware selection so you can choose the visible head even where its occupied cells overlap the base.</p>
       </section>
@@ -290,13 +295,13 @@ td { background: #0b1e2b; color: #d3e6ee; }
       <section id="grids">
         <h2>Grids and Subgrids</h2>
         <h3>Main grids</h3>
-        <p>A blueprint can contain multiple large and small grids. Use the Explorer dropdown and grid buttons to add, choose, or change grid behavior where available.</p>
+        <p>A blueprint can contain multiple large and small grids. Use the Blueprint Structure tree and the grid buttons to add grids, select a build grid, and inspect mechanical relationships.</p>
         <h3>Static and dynamic grids</h3>
         <p>Static grids are generally used for stations. Dynamic grids are used for ships, vehicles, detached structures, and mechanical top-part subgrids.</p>
         <h3>Mechanical subgrids</h3>
-        <p>A piston head, rotor head, or hinge head exists on a separate dynamic grid connected to the base grid. Blocks built on that top part belong to its subgrid and move with it.</p>
+        <p>A piston head, rotor head, hinge head, or suspension wheel exists on a separate dynamic grid connected to the base grid. Blocks built on that top part belong to its subgrid and move with it.</p>
         <h3>Explorer selection matters</h3>
-        <p>The currently active grid determines where ordinary palette blocks are added. Select the main grid to continue building the base structure. Select a top-part subgrid to build on the moving part.</p>
+        <p>The currently active build grid determines where ordinary palette blocks are added. Selecting a grid node changes the build grid. Selecting a block node only selects the block and does not move the visible construction grid.</p>
       </section>
 
       <section id="startup">
@@ -326,8 +331,8 @@ td { background: #0b1e2b; color: #d3e6ee; }
       </section>
 
       <section id="mechanical">
-        <h2>Pistons, Rotors, and Hinges</h2>
-        <p>The application supports standard pistons, Square Pistons, rotors, Advanced Rotors, and hinges on large and small grids.</p>
+        <h2>Pistons, Rotors, Hinges, Suspensions, and Wheels</h2>
+        <p>The application supports standard pistons, Square Pistons, rotors, Advanced Rotors, hinges, suspension bases, and compatible wheel top parts on large and small grids.</p>
         <h3>Add Top Part</h3>
         <ol>
           <li>Select the mechanical base.</li>
@@ -341,6 +346,8 @@ td { background: #0b1e2b; color: #d3e6ee; }
         <p>Use <strong>Detach Top Part</strong> to break the mechanical relationship. The detached subgrid remains in the blueprint until you delete it or its final block.</p>
         <h3>Building on a top part</h3>
         <p>Click the visible top part or select its subgrid in Explorer. Blocks placed afterward use the visible top-part build surface rather than the taller base block’s occupied-cell box.</p>
+        <h3>Wheel alignment</h3>
+        <p>Suspension wheels use a suspension-specific hub position instead of the rotor and hinge face offset. The editor centers the rendered wheel model on that hub for both large- and small-grid suspensions.</p>
         <h3>Viewer position versus in-game position</h3>
         <p>The app displays mechanical heads using model-aware visual alignment. Export uses Space Engineers-compatible mechanical transforms so the game can recognize and snap the connection correctly.</p>
         <div class="callout warning"><strong>After changing versions:</strong> For old projects containing a previously mismatched mechanical head, detach it and use Add Top Part again before exporting a fresh blueprint.</div>
@@ -349,9 +356,17 @@ td { background: #0b1e2b; color: #d3e6ee; }
       <section id="properties">
         <h2>Explorer, Properties, and Statistics</h2>
         <h3>Blueprint Explorer</h3>
-        <p>Explorer lists the selected grid and its blocks. Use it to switch grids, locate subgrids, and select blocks that are difficult to click in the viewport.</p>
+        <p>Explorer is a true Blueprint Structure tree. Root grids appear at the top, mechanical subgrids are nested below their rotor, hinge, piston, or suspension base, and secondary mounts are labeled when two mechanical parts connect to the same grid. Selecting a grid changes the build grid; selecting a block only selects that block.</p>
+        <h3>Tree movement tools</h3>
+        <p>The lower Explorer tools can move the selected block one cell on X, Y, or Z. Drag an unconnected block row onto another same-size grid, or use Move to grid. Both methods preserve its approximate world position and orientation and reject occupied destinations. Mechanical bases and top parts must use Connect or Disconnect so their links remain valid.</p>
+        <h3>Connection tools</h3>
+        <p>Connect uses an explicit two-step selection shown in Explorer. Disconnect removes the selected mechanical link, separates a mounted top part from a shared grid when necessary, or extracts a normal block from a mechanical subgrid into its own independent grid.</p>
+        <h3>Exact rotor and hinge angles</h3>
+        <p>Select either endpoint of a connected rotor or hinge, enter the requested degrees in Rotor / Hinge Angle, and press Apply. The complete child subgrid rotates immediately, and undo or redo restores the previous value.</p>
         <h3>Properties</h3>
         <p>The Properties tab displays editable information for the selected item. Available values depend on the block and current application version.</p>
+        <h3>Lighting</h3>
+        <p>The Lighting tab adds and deletes up to eight editor-only point lights. Each light has an editable name, enabled state, world position, intensity, range, and RGB color. In Select mode, drag a light marker directly in the viewport to move it across the current view plane, use Shift + drag for world-vertical movement, or Ctrl + drag to move it toward or away from the camera. Viewport light moves support undo and redo. These lights are stored in the project and are not exported to Space Engineers.</p>
         <h3>Statistics</h3>
         <p>Statistics summarizes the blueprint, including grid and block counts and other available build information.</p>
         <h3>Resizable panel</h3>
@@ -372,7 +387,8 @@ td { background: #0b1e2b; color: #d3e6ee; }
         <h3>Using Error List</h3>
         <p>Open the Error List tab, read the reason, and click <strong>Show</strong> to locate the affected item. Warnings may still allow export, while errors should be corrected first.</p>
         <h3>Output</h3>
-        <p>Output reports game-folder loading, definition loading, model warnings, save results, import results, export destinations, and help or link-opening errors.</p>
+        <p>When importing a blueprint, the program displays a small modal activity screen with an animated progress bar while the blueprint is read, its mechanical links are reconstructed, and the editor hierarchy is prepared. This is especially useful for large blueprints that take longer to open.</p>
+                <p>Output reports game-folder loading, definition loading, model warnings, save results, import results, export destinations, and help or link-opening errors.</p>
       </section>
 
       <section id="export">
@@ -405,9 +421,12 @@ td { background: #0b1e2b; color: #d3e6ee; }
             <tr><td><kbd>Z</kbd></td><td>Rotate placement around Z</td></tr>
             <tr><td><kbd>R</kbd></td><td>Reset placement rotation</td></tr>
             <tr><td><kbd>1</kbd>–<kbd>9</kbd></td><td>Select bottom-toolbar page</td></tr>
-            <tr><td>Right mouse drag</td><td>Orbit camera</td></tr>
+            <tr><td><kbd>C</kbd></td><td>Toggle orbit/spectator camera</td></tr>
+            <tr><td><kbd>W</kbd>/<kbd>A</kbd>/<kbd>S</kbd>/<kbd>D</kbd></td><td>Fly in spectator mode</td></tr>
+            <tr><td><kbd>Q</kbd>/<kbd>E</kbd></td><td>Move spectator camera down/up</td></tr>
+            <tr><td>Right mouse drag</td><td>Orbit or spectator free-look</td></tr>
             <tr><td>Middle mouse drag</td><td>Pan camera</td></tr>
-            <tr><td>Mouse wheel</td><td>Zoom camera</td></tr>
+            <tr><td>Mouse wheel</td><td>Zoom or spectator dolly</td></tr>
           </tbody>
         </table>
         <p>Keyboard shortcuts are ignored when focus is inside a text box or another control that needs the same key.</p>
@@ -451,9 +470,11 @@ td { background: #0b1e2b; color: #d3e6ee; }
         </div>
       </section>
 
-      <div class="footer">Scriptilyx - SE · Parallel Infinite Worlds Company · BLUEPRINT STUDIO · User Guide v1.2.5.2</div>
+      <div class="footer">Scriptilyx - SE · Parallel Infinite Worlds Company · BLUEPRINT STUDIO · User Guide v1.2.3</div>
     </div>
-  </main>
+
+
+</main>
 </div>
 <a class="top-link" href="#top" title="Back to top" aria-label="Back to top">↑</a>
 </body>
